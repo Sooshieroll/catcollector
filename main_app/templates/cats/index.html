@@ -18,29 +18,25 @@
 
     {% for cat in cats %}
     <div class="card text-center">
-        <div class="card-header">
-            Featured
-        </div>
         <div class="card-body">
             <h5 class="card-title">{{cat.name}}</h5>
             <p class="card-text">{{ cat.description}}</p>
-            <p class="card-text">Breed:{{ cat.breed}}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p class="card-text">Breed: {{ cat.breed}}</p>
+            <a href="/cats/{{ cat.id }}" class="btn btn-primary">View {{cat.name}}</a>
         </div>
         <div class="card-footer text-muted">
             Age: {{cat.age}}
         </div>
-    </div>
-    {% endfor %}
-    <button type="button" class="btn btn-primary">Primary</button>
+        {% endfor %}
+        <button type="button" class="btn btn-primary">Primary</button>
 
-    <footer>All Rights Reserved, Catcollector 2022</footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-        crossorigin="anonymous"></script>
+        <footer>All Rights Reserved, Catcollector 2022</footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+            integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
