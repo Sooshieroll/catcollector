@@ -1,11 +1,4 @@
-{% extends 'base.html' %}
-{% block content %}
-<h2>Welcome to Cat Collector</h2>
-{% endblock %}
-
-
-
-<!-- {% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,29 +15,16 @@
 <body>
     <h1>Cat Collector</h1>
 
-    {% for cat in cats %}
-    <p>Name: {{ cat.name }}</p>
-    <p>Age: {{ cat.age }}</p>
-    <p>Breed: {{ cat.breed }}</p>
-    <p>Description: {{ cat.description }}</p>
-    <hr>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="/cats">View All Cats</a></li>
+        </ol>
+    </nav>
 
-    <div class="card text-center">
-        <div class="card-header">
-            Featured
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">{{cat.name}}</h5>
-            <p class="card-text">{{ cat.description}}</p>
-            <p class="card-text">{{ cat.breed}}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-        <div class="card-footer text-muted">
-            Age: {{cat.age}}
-        </div>
-    </div>
-    {% endfor %}
-    <button type="button" class="btn btn-primary">Primary</button>
+    {% block content %}
+
+    {% endblock %}
 
     <footer>All Rights Reserved, Catcollector 2022</footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -55,4 +35,4 @@
         crossorigin="anonymous"></script>
 </body>
 
-</html> -->
+</html>
