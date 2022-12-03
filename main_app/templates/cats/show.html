@@ -8,4 +8,15 @@
 <p>Age: {{ cat.age }}</p>
 
 
+<!-- Add links for update and delete -->
+
+<a class="btn btn-warning" href="{% url 'cats_update' cat.id %}">Update Details</a>
+<a class="btn btn-danger" href="{% url 'cats_delete' cat.id %}">Delete Cat</a>
+
+<!-- <div>
+    <a class="btn btn-secondary" href="/cats/{{cat.id}}/update">Update {{ cat.name }}</a>
+    <a class="btn btn-secondary" href="/cats/{{cat.id}}/delete">Delete {{ cat.name }}</a>
+</div> -->
+
+<!--/cats/{{cat.id}}/update & {% url 'cats_update' cat.id %} both work the same way-->
 {% endblock %}
