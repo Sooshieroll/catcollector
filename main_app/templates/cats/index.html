@@ -6,8 +6,10 @@
 <div class="card text-center">
     <div class="card-body">
         <h5 class="card-title">{{cat.name}}</h5>
-
         <a href="/cats/{{ cat.id }}" class="btn btn-primary">View {{cat.name}}'s info</a>
+        <p>Adopted by:
+            <a href='/user/{{cat.user.username}}''>{{ cat.user.username}}</a>
+        </p>
     </div>
 
 
